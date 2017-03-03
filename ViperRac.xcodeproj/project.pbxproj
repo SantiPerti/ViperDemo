@@ -12,7 +12,27 @@
 		6CEB7D8D1E69C16600FEDC42 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 6CEB7D8B1E69C16600FEDC42 /* Main.storyboard */; };
 		6CEB7D8F1E69C16600FEDC42 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 6CEB7D8E1E69C16600FEDC42 /* Assets.xcassets */; };
 		6CEB7D921E69C16600FEDC42 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 6CEB7D901E69C16600FEDC42 /* LaunchScreen.storyboard */; };
+		6CEB7DA51E69C36D00FEDC42 /* ReactiveCocoa.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 6CEB7DA21E69C36D00FEDC42 /* ReactiveCocoa.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
+		6CEB7DA61E69C36D00FEDC42 /* ReactiveSwift.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 6CEB7DA31E69C36D00FEDC42 /* ReactiveSwift.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
+		6CEB7DA71E69C36D00FEDC42 /* Result.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 6CEB7DA41E69C36D00FEDC42 /* Result.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
+		6CEB7DA91E69CD7600FEDC42 /* UserController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6CEB7DA81E69CD7600FEDC42 /* UserController.swift */; };
 /* End PBXBuildFile section */
+
+/* Begin PBXCopyFilesBuildPhase section */
+		6CEB7DA11E69C35B00FEDC42 /* Frameworks */ = {
+			isa = PBXCopyFilesBuildPhase;
+			buildActionMask = 2147483647;
+			dstPath = "";
+			dstSubfolderSpec = 10;
+			files = (
+				6CEB7DA51E69C36D00FEDC42 /* ReactiveCocoa.framework in Frameworks */,
+				6CEB7DA61E69C36D00FEDC42 /* ReactiveSwift.framework in Frameworks */,
+				6CEB7DA71E69C36D00FEDC42 /* Result.framework in Frameworks */,
+			);
+			name = Frameworks;
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXCopyFilesBuildPhase section */
 
 /* Begin PBXFileReference section */
 		6CEB7D841E69C16600FEDC42 /* ViperRac.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = ViperRac.app; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -22,6 +42,10 @@
 		6CEB7D8E1E69C16600FEDC42 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		6CEB7D911E69C16600FEDC42 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		6CEB7D931E69C16600FEDC42 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		6CEB7DA21E69C36D00FEDC42 /* ReactiveCocoa.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = ReactiveCocoa.framework; path = Carthage/Build/iOS/ReactiveCocoa.framework; sourceTree = "<group>"; };
+		6CEB7DA31E69C36D00FEDC42 /* ReactiveSwift.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = ReactiveSwift.framework; path = Carthage/Build/iOS/ReactiveSwift.framework; sourceTree = "<group>"; };
+		6CEB7DA41E69C36D00FEDC42 /* Result.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Result.framework; path = Carthage/Build/iOS/Result.framework; sourceTree = "<group>"; };
+		6CEB7DA81E69CD7600FEDC42 /* UserController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = UserController.swift; path = ../UserController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -40,6 +64,7 @@
 			children = (
 				6CEB7D861E69C16600FEDC42 /* ViperRac */,
 				6CEB7D851E69C16600FEDC42 /* Products */,
+				6CEB7D9A1E69C27000FEDC42 /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -54,6 +79,7 @@
 		6CEB7D861E69C16600FEDC42 /* ViperRac */ = {
 			isa = PBXGroup;
 			children = (
+				6CEB7DA81E69CD7600FEDC42 /* UserController.swift */,
 				6CEB7D871E69C16600FEDC42 /* AppDelegate.swift */,
 				6CEB7D891E69C16600FEDC42 /* ViewController.swift */,
 				6CEB7D8B1E69C16600FEDC42 /* Main.storyboard */,
@@ -62,6 +88,16 @@
 				6CEB7D931E69C16600FEDC42 /* Info.plist */,
 			);
 			path = ViperRac;
+			sourceTree = "<group>";
+		};
+		6CEB7D9A1E69C27000FEDC42 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				6CEB7DA21E69C36D00FEDC42 /* ReactiveCocoa.framework */,
+				6CEB7DA31E69C36D00FEDC42 /* ReactiveSwift.framework */,
+				6CEB7DA41E69C36D00FEDC42 /* Result.framework */,
+			);
+			name = Frameworks;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -74,6 +110,7 @@
 				6CEB7D801E69C16600FEDC42 /* Sources */,
 				6CEB7D811E69C16600FEDC42 /* Frameworks */,
 				6CEB7D821E69C16600FEDC42 /* Resources */,
+				6CEB7DA11E69C35B00FEDC42 /* Frameworks */,
 			);
 			buildRules = (
 			);
@@ -96,6 +133,7 @@
 				TargetAttributes = {
 					6CEB7D831E69C16600FEDC42 = {
 						CreatedOnToolsVersion = 8.2.1;
+						DevelopmentTeam = L8YSUA92XX;
 						ProvisioningStyle = Automatic;
 					};
 				};
@@ -136,6 +174,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				6CEB7DA91E69CD7600FEDC42 /* UserController.swift in Sources */,
 				6CEB7D8A1E69C16600FEDC42 /* ViewController.swift in Sources */,
 				6CEB7D881E69C16600FEDC42 /* AppDelegate.swift in Sources */,
 			);
@@ -260,6 +299,11 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				DEVELOPMENT_TEAM = L8YSUA92XX;
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(PROJECT_DIR)/Carthage/Build/iOS",
+				);
 				INFOPLIST_FILE = ViperRac/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = jmpg93.ViperRac;
@@ -272,6 +316,11 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				DEVELOPMENT_TEAM = L8YSUA92XX;
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(PROJECT_DIR)/Carthage/Build/iOS",
+				);
 				INFOPLIST_FILE = ViperRac/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = jmpg93.ViperRac;
