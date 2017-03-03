@@ -32,13 +32,21 @@ class ViewController: UIViewController {
             .reactive
             .continuousTextValues
             .skipNil()
-            .map(isValidUsername)
+            .map(isValidPassword)
+        
+        validUser
+            .combineLatest(with: validPassword)
+            .observe(on: UIScheduler())
+            .map({ $0 && $1 })
+            .observeValues { isEnabled in
+                self.loginButton.isEnabled = isEnabled
+            }
         
         loginButton
             .reactive
             .controlEvents(.touchUpInside)
-            .observe(on: UIScheduler())
             .observeValues(login)
+        
         
     }
 
@@ -48,6 +56,8 @@ class ViewController: UIViewController {
         guard let username = usernameTextField.text, let password = passwordTextField.text else {
             return
         }
+        
+        print("Starting login...")
         
         userController
             .login(username: username, password: password)
@@ -68,24 +78,14 @@ class ViewController: UIViewController {
         
     }
     
-    private func isValidUsername(user: String) -> Bool {
-        return user.characters.count > 3
+    private func isValidPassword(pass: String) -> Bool {
+        return pass.characters.count > 3
     }
     
     private func isValidEmail(email: String) -> Bool {
         let emailFormat = "[A-Z0-9a-z._%+-]+@[A-Za-z0-9.-]+\\.[A-Za-z]{2,64}"
         let emailPredicate = NSPredicate(format:"SELF MATCHES %@", emailFormat)
+        
         return emailPredicate.evaluate(with: email)
     }
 }
-
-extension UIView {
-    func shake() {
-        let animation = CAKeyframeAnimation(keyPath: "transform.translation.x")
-        animation.timingFunction = CAMediaTimingFunction(name: kCAMediaTimingFunctionLinear)
-        animation.duration = 0.6
-        animation.values = [-20.0, 20.0, -20.0, 20.0, -10.0, 10.0, -5.0, 5.0, 0.0 ]
-        layer.add(animation, forKey: "shake")
-    }
-}
-
