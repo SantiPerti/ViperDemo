@@ -28,7 +28,6 @@ class DefaultLoginPresenter: LoginPresenter {
         }
     }
     
-    
     func isValidPassword(pass: String) -> Bool {
         return pass.characters.count > 3
     }
